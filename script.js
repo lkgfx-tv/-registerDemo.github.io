@@ -6,6 +6,7 @@ let email= document.getElementById("email")
 let phone= document.getElementById("phone")
 let jobTitle= document.getElementById("jobTitle")
 let company= document.getElementById("company")
+let appName=document.getElementById("appName")
 let copy= document.getElementById("copy")
 let loading=document.getElementById("loading")
 let  credentials= btoa("lesliekajomovitz@gmail.com" + ":" + "cybulalau26");
@@ -90,7 +91,8 @@ let createAppRequest=async(url, auth, body, type) =>{
 }
 let renameAppInstance = async(appInstanceId)=>{
   var requestURL = "https://app.singular.live/apiv1/appinstances/"+appInstanceId+"/metadata";
-  let appName= name.value+"'s control app"
+  //find me
+  let appName= appName.value+"'s control app"
   var requestBody = {
     "name": appName,
     
