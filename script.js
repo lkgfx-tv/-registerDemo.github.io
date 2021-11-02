@@ -92,9 +92,9 @@ let createAppRequest=async(url, auth, body, type) =>{
 let renameAppInstance = async(appInstanceId)=>{
   var requestURL = "https://app.singular.live/apiv1/appinstances/"+appInstanceId+"/metadata";
   //find me
-  let appName= appName.value+"'s control app"
+  let name= appName.value+"'s control app"
   var requestBody = {
-    "name": appName,
+    name,
     
   };
   let renamedApp= await createAppRequest(requestURL, credentials, requestBody,"PUT");
